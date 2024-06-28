@@ -1,6 +1,7 @@
-nginx
-python:3.10
-nacos/nacos-server
-node:18-alpine
-nginx:1.23.1-alpine
-redis
+#nginx
+#python:3.10
+#nacos/nacos-server
+#node:18-alpine
+#nginx:1.23.1-alpine
+#redis
+milvusbootcamp/img-search-client:2.2.10
