@@ -5,4 +5,5 @@
 #nginx:1.23.1-alpine
 #redis
 #milvusbootcamp/img-search-client:2.2.10
-rafalkrypa/ffmpeg
+#rafalkrypa/ffmpeg
+mongo:4.2.18
