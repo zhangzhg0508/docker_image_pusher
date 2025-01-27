@@ -6,4 +6,5 @@
 #redis
 #milvusbootcamp/img-search-client:2.2.10
 #rafalkrypa/ffmpeg
-mongo:4.2.18
+#mongo:4.2.18
+openjdk:8-alpine
