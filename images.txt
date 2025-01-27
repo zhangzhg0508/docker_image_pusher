@@ -9,4 +9,5 @@
 #mongo:4.2.18
 #openjdk:8-alpine
 #zhangnan30/jira:v8.14
-openjdk:17-alpine
+#openjdk:17-alpine
+postgres:11
