@@ -8,4 +8,5 @@
 #rafalkrypa/ffmpeg
 #mongo:4.2.18
 #openjdk:8-alpine
-zhangnan30/jira:v8.14
+#zhangnan30/jira:v8.14
+openjdk:17-alpine
