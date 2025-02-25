@@ -39,5 +39,6 @@
 #couchbase/server:latest
 #microfluidica/openfoam:2412
 #infiniflow/ragflow:v0.16.0-slim
-microfluidica/openfoam:1912
+#microfluidica/openfoam:1912
+opencfd/openfoam:1806
 
