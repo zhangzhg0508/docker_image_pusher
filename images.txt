@@ -38,5 +38,6 @@
 #downloads.unstructured.io/unstructured-io/unstructured-api:latest
 #couchbase/server:latest
 #microfluidica/openfoam:2412
-infiniflow/ragflow:v0.16.0-slim
+#infiniflow/ragflow:v0.16.0-slim
+microfluidica/openfoam:1706
 
