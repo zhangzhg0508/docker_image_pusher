@@ -46,4 +46,5 @@
 #langgenius/dify-web:1.0.0
 #langgenius/dify-plugin-daemon:0.0.3-local
 #ubuntu:24.04
-infiniflow/ragflow:v0.17.0
+#infiniflow/ragflow:v0.17.0
+python:3.12
