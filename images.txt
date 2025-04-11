@@ -56,4 +56,5 @@
 #valkey/valkey:8
 #docker.io/openjdk:11-jre-slim
 #ghcr.io/ourongxing/newsnow:latest
-precice/precice
+#precice/precice
+precice/ci-archlinux
