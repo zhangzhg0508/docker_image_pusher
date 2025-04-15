@@ -58,4 +58,5 @@
 #ghcr.io/ourongxing/newsnow:latest
 #precice/precice
 #precice/ci-archlinux
-nacos/nacos-server
+#nacos/nacos-server
+dataease/dataease
