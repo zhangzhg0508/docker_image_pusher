@@ -60,4 +60,5 @@
 #precice/ci-archlinux
 #nacos/nacos-server
 #wojiushixiaobai/dataease
-rbehzadan/readerlm
+#rbehzadan/readerlm
+minio/minio:RELEASE.2025-04-03T14-56-28Z
