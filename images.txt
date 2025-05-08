@@ -62,4 +62,5 @@
 #wojiushixiaobai/dataease
 #rbehzadan/readerlm
 #minio/minio:RELEASE.2025-04-03T14-56-28Z
-quay.io/centos/centos:stream9
+#quay.io/centos/centos:stream9
+neuml/txtai-cpu
