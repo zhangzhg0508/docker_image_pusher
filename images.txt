@@ -65,4 +65,5 @@
 #quay.io/centos/centos:stream9
 #neuml/txtai-cpu
 #mmaigler/hystrath
-gitlab/gitlab-ce
+#gitlab/gitlab-ce
+kubesphere/pause:3.6
