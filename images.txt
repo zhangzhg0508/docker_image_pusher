@@ -1,6 +1,6 @@
 #nginx
 #python:3.10
-#nacos/nacos-server
+nacos/nacos-server
 #node:18-alpine
 #nginx:1.23.1-alpine
 #redis
@@ -68,4 +68,4 @@
 #gitlab/gitlab-ce
 #kubesphere/pause:3.6
 #library/postgres:15.13
-library/rabbitmq:4.1.2-management
+#library/rabbitmq:4.1.2-management
