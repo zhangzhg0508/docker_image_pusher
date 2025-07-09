@@ -69,4 +69,5 @@
 #kubesphere/pause:3.6
 #library/postgres:15.13
 #library/rabbitmq:4.1.2-management
-tdengine/tdengine
+#tdengine/tdengine
+library/clickhouse
