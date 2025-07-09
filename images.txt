@@ -70,4 +70,5 @@
 #library/postgres:15.13
 #library/rabbitmq:4.1.2-management
 #tdengine/tdengine
-library/clickhouse
+#library/clickhouse
+polardb/polardb_pg_devel:anolis8
