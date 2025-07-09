@@ -66,4 +66,5 @@
 #neuml/txtai-cpu
 #mmaigler/hystrath
 #gitlab/gitlab-ce
-kubesphere/pause:3.6
+#kubesphere/pause:3.6
+library/postgres:15.13
