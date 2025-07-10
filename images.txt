@@ -71,4 +71,4 @@
 #library/rabbitmq:4.1.2-management
 #tdengine/tdengine
 #library/clickhouse
-polardb/polardb_pg_devel:anolis8
+polardb/polardb_pg_devel
