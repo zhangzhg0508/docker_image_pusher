@@ -71,4 +71,5 @@
 #library/rabbitmq:4.1.2-management
 #tdengine/tdengine
 #library/clickhouse
-polardb/polardb_pg_devel
+#polardb/polardb_pg_devel
+polardb/polardb_pg_local_instance:latest
