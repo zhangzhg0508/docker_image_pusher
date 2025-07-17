@@ -72,4 +72,5 @@
 #tdengine/tdengine
 #library/clickhouse
 #polardb/polardb_pg_devel
-polardb/polardb_pg_local_instance:latest
+#polardb/polardb_pg_local_instance:latest
+library/solr:latest
