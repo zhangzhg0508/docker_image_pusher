@@ -74,4 +74,5 @@
 #polardb/polardb_pg_devel
 #polardb/polardb_pg_local_instance:latest
 #library/solr:latest
-bitnami/minio:latest
+#bitnami/minio:latest
+jenkinsciinfra/jenkins-lts:latest
