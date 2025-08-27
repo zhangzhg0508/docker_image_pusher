@@ -76,4 +76,5 @@
 #library/solr:latest
 #bitnami/minio:latest
 #jenkinsciinfra/jenkins-lts:latest
-sonatype/nexus3:latest
+#sonatype/nexus3:latest
+bitnami/kafka:latest
