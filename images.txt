@@ -77,4 +77,5 @@
 #bitnami/minio:latest
 #jenkinsciinfra/jenkins-lts:latest
 #sonatype/nexus3:latest
-bitnami/kafka:latest
+#bitnami/kafka:latest
+sonatype/nexus3:3.82.1-alpine
