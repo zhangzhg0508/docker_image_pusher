@@ -78,4 +78,5 @@
 #jenkinsciinfra/jenkins-lts:latest
 #sonatype/nexus3:latest
 #bitnami/kafka:latest
-sonatype/nexus3:3.82.1-alpine
+#sonatype/nexus3:3.82.1-alpine
+bitnami/node-exporter:1.9.1
