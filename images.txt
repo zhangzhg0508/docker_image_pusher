@@ -80,4 +80,5 @@
 #bitnami/kafka:latest
 #sonatype/nexus3:3.82.1-alpine
 #bitnami/node-exporter:1.9.1
-bitnami/alertmanager:0.28.1
+#bitnami/alertmanager:0.28.1
+bitnami/minio:2025.7.23
