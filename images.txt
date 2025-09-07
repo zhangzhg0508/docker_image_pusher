@@ -82,4 +82,5 @@
 #bitnami/node-exporter:1.9.1
 #bitnami/alertmanager:0.28.1
 #bitnami/minio:2025.7.23
-bitnami/prometheus
+#bitnami/prometheus
+pkyit/nacos:2.3.2-dm8
