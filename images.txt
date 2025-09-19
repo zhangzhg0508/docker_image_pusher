@@ -83,4 +83,5 @@
 #bitnami/alertmanager:0.28.1
 #bitnami/minio:2025.7.23
 #bitnami/prometheus
-pkyit/nacos:2.3.2-dm8
+#pkyit/nacos:2.3.2-dm8
+pkyit/nacos:2.4.3-dm8
