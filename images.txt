@@ -87,4 +87,5 @@
 #pkyit/nacos:2.4.3-dm8
 #library/rabbitmq:3.13.7-management
 #grafana/grafana
-kafkace/kafka:v3.5.2
+#kafkace/kafka:v3.5.2
+library/zookeeper:3.6.3
