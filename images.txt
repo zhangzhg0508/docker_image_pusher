@@ -88,4 +88,5 @@
 #library/rabbitmq:3.13.7-management
 #grafana/grafana
 #kafkace/kafka:v3.5.2
-library/zookeeper:3.6.3
+#library/zookeeper:3.6.3
+shawly/keepalived
