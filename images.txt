@@ -91,4 +91,5 @@
 #library/zookeeper:3.6.3
 #shawly/keepalived
 #zhaojun1998/zfile
-visibilityspots/keepalived
+#visibilityspots/keepalived
+ednxzu/keepalived
