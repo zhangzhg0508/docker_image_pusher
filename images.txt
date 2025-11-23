@@ -93,4 +93,5 @@
 #zhaojun1998/zfile
 #visibilityspots/keepalived
 #ednxzu/keepalived
-onlyoffice/documentserver
+#onlyoffice/documentserver
+keking/kkfileview:4.4.0
