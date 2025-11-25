@@ -94,4 +94,4 @@
 #visibilityspots/keepalived
 #ednxzu/keepalived
 #onlyoffice/documentserver
-keking/kkfileview:4.4.0
+greatexpectations/jupyter
