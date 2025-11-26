@@ -97,6 +97,6 @@
 #greatexpectations/jupyter
 #juicedata/juicefs-csi-driver
 #juicedata/juicefs
-juicedata/mount
-zhaojun1998/zfile
-zhaojun1998/zfile-pro
+juicedata/mount:ce-nightly
+#zhaojun1998/zfile
+#zhaojun1998/zfile-pro
