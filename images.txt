@@ -97,6 +97,7 @@
 #greatexpectations/jupyter
 #juicedata/juicefs-csi-driver
 #juicedata/juicefs
-juicedata/mount:ce-v1.3.0
+#juicedata/mount:ce-v1.3.0
 #zhaojun1998/zfile
 #zhaojun1998/zfile-pro
+juicedata/mount:ee-5.2.19-ceb973d
