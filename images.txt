@@ -104,4 +104,5 @@
 #quay.io/prometheuscommunity/ipmi-exporter:latest
 #docker.io/handflucht/pyscenedetect:add_linter
 #onlyoffice/documentserver:9.2
-gpustack/gpustack:main-dcu
+#gpustack/gpustack:main-dcu
+prometheuscommunity/smartctl-exporter
