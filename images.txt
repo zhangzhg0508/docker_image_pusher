@@ -108,4 +108,5 @@
 #prometheuscommunity/smartctl-exporter
 #cvat/server
 #cvat/ui
-handflucht/pyscenedetect:add_linter
+#handflucht/pyscenedetect:add_linter
+handflucht/pyscenedetect
