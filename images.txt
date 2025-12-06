@@ -106,5 +106,6 @@
 #onlyoffice/documentserver:9.2
 #gpustack/gpustack:main-dcu
 #prometheuscommunity/smartctl-exporter
-cvat/server
-cvat/ui
+#cvat/server
+#cvat/ui
+handflucht/pyscenedetect:add_linter
