@@ -110,4 +110,5 @@
 #cvat/ui
 #handflucht/pyscenedetect:add_linter
 #handflucht/pyscenedetect
-gpustack/gpustack:main-cuda12.8
+#gpustack/gpustack:main-cuda12.8
+dockurr/chrony
