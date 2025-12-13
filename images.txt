@@ -111,4 +111,5 @@
 #handflucht/pyscenedetect:add_linter
 #handflucht/pyscenedetect
 #gpustack/gpustack:main-cuda12.8
-dockurr/chrony
+#dockurr/chrony
+gpustack/gpustack
