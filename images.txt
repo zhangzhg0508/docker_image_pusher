@@ -112,4 +112,6 @@
 #handflucht/pyscenedetect
 #gpustack/gpustack:main-cuda12.8
 #dockurr/chrony
-gpustack/gpustack
+#gpustack/gpustack
+rclone/rclone:v1.72-stable
+rclone/rclone
