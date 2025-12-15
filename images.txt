@@ -115,4 +115,5 @@
 #gpustack/gpustack
 #rclone/rclone:v1.72-stable
 #rclone/rclone
-docker.io/gpustack/runtime:pause
+#docker.io/gpustack/runtime:pause
+gpustack/runner:cuda12.8-vllm0.11.2-linux-amd64
