@@ -120,4 +120,6 @@
 #gpustack/runner:cuda12.6-vllm0.11.2-linux-amd64
 #louislam/uptime-kuma
 #nocodb/nocodb
-immauss/openvas:25.12.26.01
+#immauss/openvas:25.12.26.01
+immauss/openvas
+
