@@ -123,4 +123,5 @@
 #nocodb/nocodb
 #immauss/openvas:25.12.26.01
 #immauss/openvas
-prom/node-exporter:v1.10.2
+#prom/node-exporter:v1.10.2
+prometheuscommunity/smartctl-exporter:v0.14.0
