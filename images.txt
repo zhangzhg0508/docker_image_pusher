@@ -128,4 +128,6 @@
 #prom/prometheus:v3.5.1
 #prometheuscommunity/ipmi-exporter:v1.10.1
 #grafana/grafana
-netdata/netdata:stable
+#netdata/netdata:stable
+jasonish/suricata:8.0.3
+elastic/filebeat:9.2.4
