@@ -127,4 +127,5 @@
 #prometheuscommunity/smartctl-exporter:v0.14.0
 #prom/prometheus:v3.5.1
 #prometheuscommunity/ipmi-exporter:v1.10.1
-grafana/grafana
+#grafana/grafana
+netdata/netdata:stable
