@@ -131,5 +131,5 @@
 #netdata/netdata:stable
 #jasonish/suricata:8.0.3
 #elastic/filebeat:9.2.4
-library/logstash:9.3.0
-
+#library/logstash:9.3.0
+mikesplain/openvas
