@@ -133,4 +133,5 @@
 #elastic/filebeat:9.2.4
 #library/logstash:9.3.0
 #mikesplain/openvas
-immauss/openvas:25.12.26.01-slim
+#immauss/openvas:25.12.26.01-slim
+immauss/openvas:beta
