@@ -122,7 +122,7 @@
 #louislam/uptime-kuma
 #nocodb/nocodb
 #immauss/openvas:25.12.26.01
-#immauss/openvas
+immauss/openvas
 #prom/node-exporter:v1.10.2
 #prometheuscommunity/smartctl-exporter:v0.14.0
 #prom/prometheus:v3.5.1
@@ -134,4 +134,5 @@
 #library/logstash:9.3.0
 #mikesplain/openvas
 #immauss/openvas:25.12.26.01-slim
-immauss/openvas:beta
+#immauss/openvas:beta
+immauss/openvas:22.4.52
