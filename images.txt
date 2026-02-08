@@ -122,7 +122,7 @@
 #louislam/uptime-kuma
 #nocodb/nocodb
 #immauss/openvas:25.12.26.01
-immauss/openvas
+#immauss/openvas
 #prom/node-exporter:v1.10.2
 #prometheuscommunity/smartctl-exporter:v0.14.0
 #prom/prometheus:v3.5.1
@@ -136,4 +136,6 @@ immauss/openvas
 #immauss/openvas:25.12.26.01-slim
 #immauss/openvas:beta
 #immauss/openvas:22.4.52
-kasmweb/vlc:1.18.0
+#kasmweb/vlc:1.18.0
+registry.videolan.org/vlc-debian-llvm-msvcrt:202512221004
+registry.videolan.org/vlc-debian-llvm-ucrt:202512221004
