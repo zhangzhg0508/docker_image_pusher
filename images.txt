@@ -135,4 +135,5 @@ immauss/openvas
 #mikesplain/openvas
 #immauss/openvas:25.12.26.01-slim
 #immauss/openvas:beta
-immauss/openvas:22.4.52
+#immauss/openvas:22.4.52
+kasmweb/vlc:1.18.0
