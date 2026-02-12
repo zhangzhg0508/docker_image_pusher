@@ -137,5 +137,6 @@
 #immauss/openvas:beta
 #immauss/openvas:22.4.52
 #kasmweb/vlc:1.18.0
-registry.videolan.org/vlc-debian-llvm-msvcrt:20260121170706
-registry.videolan.org/vlc-debian-llvm-ucrt:20260121170706
+#registry.videolan.org/vlc-debian-llvm-msvcrt:20260121170706
+#registry.videolan.org/vlc-debian-llvm-ucrt:20260121170706
+gpustack/gpustack:v2.0.3
