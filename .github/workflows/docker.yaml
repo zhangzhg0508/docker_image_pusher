@@ -16,7 +16,7 @@ jobs:
     name: Pull and Sync Images
     runs-on: ubuntu-latest
     steps:
-      - name: Before cleanup
+      - name: Initial disk space check
         run: |
           echo "Initial disk space:"
           df -h /
@@ -31,20 +31,42 @@ jobs:
           remove-haskell: 'true'
           remove-android: 'true'
           remove-codeql: 'true'
-          # 移除以下危险配置
-          # pv-loop-path: /pv.img                 ← 删除
-          # tmp-pv-loop-path: /mnt/tmp-pv.img     ← 删除
-          # build-mount-path: '/var/lib/docker/'  ← 删除
 
-      - name: After cleanup
+      - name: Disk space after cleanup
         run: |
           echo "Disk space after cleanup:"
           df -h /
 
-      - name: Cleanup residual files
+      - name: Cleanup residual files and deactivate LVM
         run: |
-          sudo rm -f /pv.img
-          sudo rm -f /mnt/tmp-pv.img
+          echo "Deactivating LVM volumes..."
+          sudo vgchange -an buildvg || true
+
+          echo "Removing loop devices..."
+          for dev in $(losetup -a | grep -E '(/pv\.img|/mnt/tmp-pv\.img)' | cut -d: -f1); do
+            echo "Detaching $dev"
+            sudo losetup -d "$dev" || true
+          done
+
+          echo "Deleting residual files..."
+          sudo rm -f /pv.img /mnt/tmp-pv.img
+
+          echo "Final disk space after cleanup:"
+          df -h /
+
+      - name: Verify no LVM artifacts remain
+        run: |
+          if [ -f /pv.img ]; then
+            echo "ERROR: /pv.img still exists!" >&2
+            ls -lh /pv.img
+            exit 1
+          fi
+          if [ -f /mnt/tmp-pv.img ]; then
+            echo "ERROR: /mnt/tmp-pv.img still exists!" >&2
+            ls -lh /mnt/tmp-pv.img
+            exit 1
+          fi
+          echo "✅ No LVM artifacts found."
 
       - name: Checkout Code
         uses: actions/checkout@v4
