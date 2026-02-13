@@ -149,6 +149,8 @@ jobs:
             echo "=============================================================================="
             docker rmi $image
             docker rmi $new_image
+            docker system prune -a --volumes -f
+            docker builder prune -af
             echo "磁盘空间清理完毕"
             echo "=============================================================================="
             df -hT
