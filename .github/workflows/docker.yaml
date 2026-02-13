@@ -1,4 +1,4 @@
-name: Docker Image Sync to Aliyun ACR
+name: Sync Docker Images to Aliyun ACR
 
 on:
   workflow_dispatch:
@@ -12,8 +12,8 @@ env:
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
 
 jobs:
-  build:
-    name: Pull and Sync Images
+  sync:
+    name: Sync Public Images to Aliyun ACR
     runs-on: ubuntu-latest
     steps:
       - name: Initial disk space check
@@ -21,65 +21,10 @@ jobs:
           echo "Initial disk space:"
           df -h /
 
-      # 安全清理：仅移除无用软件包，不启用 LVM
-      - name: Maximize build space (NO LVM!)
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 2048
-          swap-size-mb: 128
-          remove-dotnet: 'true'
-          remove-haskell: 'true'
-          remove-android: 'true'
-          remove-codeql: 'true'
-          # ⚠️ 注意：未设置 temp-reserve-mb 等任何 LVM 参数！
-
-      - name: Disk space after basic cleanup
-        run: |
-          echo "Disk space after software cleanup:"
-          df -h /
-
-      # === 强力清理：应对可能的历史 LVM 残留（仅一次或兜底）===
-      - name: Cleanup LVM and residual files (properly)
-        run: |
-          echo "=== Step 1: Turn off LVM-based swap ==="
-          if swapon --show | grep -q '/dev/mapper/buildvg-swap'; then
-            echo "Disabling swap on /dev/mapper/buildvg-swap"
-            sudo swapoff /dev/mapper/buildvg-swap || true
-          fi
-
-          echo "=== Step 2: Deactivate logical volumes ==="
-          sudo lvchange -an buildvg 2>/dev/null || true
-
-          echo "=== Step 3: Deactivate volume group ==="
-          sudo vgchange -an buildvg 2>/dev/null || true
-
-          echo "=== Step 4: Remove physical volumes ==="
-          sudo pvremove -ff /dev/loop0 /dev/loop1 2>/dev/null || true
-
-          echo "=== Step 5: Detach loop devices ==="
-          sudo losetup -d /dev/loop0 2>/dev/null || true
-          sudo losetup -d /dev/loop1 2>/dev/null || true
-
-          echo "=== Step 6: Delete image files ==="
-          sudo rm -f /pv.img /mnt/tmp-pv.img
-
-          echo "=== Final disk space after LVM cleanup ==="
-          df -h /
-
-      # 验证是否真的清理干净
-      - name: Verify no LVM artifacts remain
-        run: |
-          if [ -e /pv.img ] || [ -e /mnt/tmp-pv.img ]; then
-            echo "❌ ERROR: LVM image files still exist!" >&2
-            ls -lh /pv.img /mnt/tmp-pv.img 2>/dev/null || true
-            exit 1
-          fi
-          echo "✅ No LVM artifacts — disk is clean."
-
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install skopeo (for direct registry-to-registry copy)
+      - name: Install skopeo
         run: |
           sudo apt-get update
           sudo apt-get install -y skopeo
@@ -91,14 +36,19 @@ jobs:
             --username "$ALIYUN_REGISTRY_USER" \
             --password-stdin
 
-      - name: Sync images from images.txt to Aliyun ACR
+      - name: Sync images from images.txt
         run: |
+          if [ ! -f images.txt ]; then
+            echo "❌ Error: images.txt not found!" >&2
+            exit 1
+          fi
+
           while IFS= read -r line || [ -n "$line" ]; do
             # Skip empty lines and comments
             [[ -z "$line" ]] && continue
             [[ "$line" =~ ^[[:space:]]*# ]] && continue
 
-            # Extract source image (last field, remove platform suffix like @sha256:...)
+            # Extract source image (remove platform suffix like @sha256:...)
             src_image=$(echo "$line" | awk '{print $NF}' | sed 's/@.*$//')
             echo "Processing: $src_image"
 
@@ -107,7 +57,7 @@ jobs:
             image_name=$(echo "$image_name_tag" | awk -F':' '{print $1}')
             tag=$(echo "$image_name_tag" | awk -F':' '{print ($2 == "" ? "latest" : $2)}')
 
-            # Handle namespace (e.g., docker.io/library/nginx → docker.io_library_nginx)
+            # Handle registry namespace (e.g., docker.io/library/nginx → docker.io_library_nginx)
             if [[ "$src_image" == *"/"* ]]; then
               parts=(${src_image//\// })
               if [[ ${#parts[@]} -eq 3 ]]; then
@@ -128,9 +78,9 @@ jobs:
               dest_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$image_name:$tag"
             fi
 
-            echo "Copying to: $dest_image"
+            echo "➡️ Copying to: $dest_image"
 
-            # Direct registry-to-registry copy (no local storage)
+            # Perform direct registry-to-registry copy
             if ! skopeo copy "docker://$src_image" "docker://$dest_image"; then
               echo "❌ Failed to sync $src_image" >&2
               exit 1
