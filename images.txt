@@ -1,4 +1,4 @@
-nginx
+#nginx
 #python:3.10
 #nacos/nacos-server
 #node:18-alpine
@@ -139,5 +139,5 @@ nginx
 #kasmweb/vlc:1.18.0
 #registry.videolan.org/vlc-debian-llvm-msvcrt:20260121170706
 #registry.videolan.org/vlc-debian-llvm-ucrt:20260121170706
-#gpustack/gpustack:v2.0.3
+gpustack/gpustack:v2.0.3
 
