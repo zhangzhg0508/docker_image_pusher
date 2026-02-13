@@ -31,7 +31,7 @@ jobs:
           remove-haskell: 'true'
           remove-android: 'true'
           remove-codeql: 'true'
-          # 关键：移除以下危险配置
+          # 移除以下危险配置
           # pv-loop-path: /pv.img                 ← 删除
           # tmp-pv-loop-path: /mnt/tmp-pv.img     ← 删除
           # build-mount-path: '/var/lib/docker/'  ← 删除
@@ -40,6 +40,11 @@ jobs:
         run: |
           echo "Disk space after cleanup:"
           df -h /
+
+      - name: Cleanup residual files
+        run: |
+          sudo rm -f /pv.img
+          sudo rm -f /mnt/tmp-pv.img
 
       - name: Checkout Code
         uses: actions/checkout@v4
