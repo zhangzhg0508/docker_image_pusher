@@ -141,4 +141,5 @@
 #registry.videolan.org/vlc-debian-llvm-ucrt:20260121170706
 #gpustack/gpustack:v2.0.3
 #library/busybox
-gpustack/gpustack:v2.1.0
+#gpustack/gpustack:v2.1.0
+gogoshine/scenedetect
