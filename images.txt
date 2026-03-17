@@ -142,4 +142,5 @@
 #gpustack/gpustack:v2.0.3
 #library/busybox
 #gpustack/gpustack:v2.1.0
-gogoshine/scenedetect
+#gogoshine/scenedetect
+gpustack/benchmark-runner:v0.0.2
