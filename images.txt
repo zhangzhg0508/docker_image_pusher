@@ -143,4 +143,5 @@
 #library/busybox
 #gpustack/gpustack:v2.1.0
 #gogoshine/scenedetect
-gpustack/benchmark-runner:v0.0.2
+#gpustack/benchmark-runner:v0.0.2
+gpustack/runner:cuda12.9-vllm0.11.2-linux-amd64
