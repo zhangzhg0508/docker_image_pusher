@@ -147,4 +147,5 @@
 #gpustack/runner:cuda12.9-vllm0.11.2-linux-amd64
 #gpustack/gpustack:v2.1.1
 #gpustack/runner:cuda12.9-vllm0.16.0-linux-amd64
-gpustack/runner:cuda12.9-vllm0.15.1-linux-amd64
+#gpustack/runner:cuda12.9-vllm0.15.1-linux-amd64
+gpustack/runner:cuda12.9-vllm0.17.1-linux-amd64
