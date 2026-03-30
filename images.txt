@@ -150,4 +150,5 @@
 #gpustack/runner:cuda12.9-vllm0.15.1-linux-amd64
 #gpustack/runner:cuda12.9-vllm0.17.1-linux-amd64
 #vllm/vllm-openai:v0.11.2-x86_64
-xprobe/xinference:v2.4.0
+#xprobe/xinference:v2.4.0
+gpustack/runner:cuda12.9-sglang0.5.9
