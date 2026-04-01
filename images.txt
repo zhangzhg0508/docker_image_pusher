@@ -152,4 +152,7 @@
 #vllm/vllm-openai:v0.11.2-x86_64
 #xprobe/xinference:v2.4.0
 #gpustack/runner:cuda12.9-sglang0.5.9
-xprobe/xinference:v2.4.0
+#xprobe/xinference:v2.4.0
+vllm/vllm-openai:v0.7.2
+vllm/vllm-openai:v0.7.3
+vllm/vllm-openai:v0.8.5
