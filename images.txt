@@ -157,5 +157,8 @@
 #vllm/vllm-openai:v0.7.3
 #vllm/vllm-openai:v0.8.5
 #xprobe/xinference:v0.15.3
-sambaweb/sambaweb-samba:latest
-sambaweb/sambaweb-postgres:latest
+#sambaweb/sambaweb-samba:latest
+#sambaweb/sambaweb-postgres:latest
+node:20
+nginx:stable-alpine
+
