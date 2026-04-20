@@ -159,6 +159,6 @@
 #xprobe/xinference:v0.15.3
 #sambaweb/sambaweb-samba:latest
 #sambaweb/sambaweb-postgres:latest
-node:20
-nginx:stable-alpine
-
+#node:20
+#nginx:stable-alpine
+imker25/samba_exporter
