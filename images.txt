@@ -162,5 +162,6 @@
 #node:20
 #nginx:stable-alpine
 #imker25/samba_exporter
-surrealdb/surrealdb:v2
-lfnovo/open_notebook:v1-latest
+#surrealdb/surrealdb:v2
+#lfnovo/open_notebook:v1-latest
+dexidp/dex:latest
