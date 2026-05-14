@@ -110,7 +110,7 @@
 #cvat/server
 #cvat/ui
 #handflucht/pyscenedetect:add_linter
-#handflucht/pyscenedetect
+handflucht/pyscenedetect
 #gpustack/gpustack:main-cuda12.8
 #dockurr/chrony
 #gpustack/gpustack
@@ -165,4 +165,4 @@
 #surrealdb/surrealdb:v2
 #lfnovo/open_notebook:v1-latest
 #dexidp/dex:latest
-opencfd/openfoam-dev:2406
+#opencfd/openfoam-dev:2406
