@@ -165,6 +165,7 @@ handflucht/pyscenedetect
 #surrealdb/surrealdb:v2
 #lfnovo/open_notebook:v1-latest
 #dexidp/dex:latest
+library/rabbitmq:3.13-management
 
 #opencfd/openfoam-dev:2406
 library/rabbitmq:3.13-management
