@@ -110,7 +110,7 @@
 #cvat/server
 #cvat/ui
 #handflucht/pyscenedetect:add_linter
-handflucht/pyscenedetect
+#handflucht/pyscenedetect
 #gpustack/gpustack:main-cuda12.8
 #dockurr/chrony
 #gpustack/gpustack
@@ -169,4 +169,5 @@ handflucht/pyscenedetect
 #library/rabbitmq:3.13-management
 #bradydeetz121/beat-exporter:0.4.2
 #justb4/jmeter:5.5
-grafana/k6:2.2.0-with-browser
+#grafana/k6:2.2.0-with-browser
+mcr.microsoft.com/playwright:v1.59.0-noble
