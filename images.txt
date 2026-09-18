@@ -170,4 +170,5 @@
 #bradydeetz121/beat-exporter:0.4.2
 #justb4/jmeter:5.5
 #grafana/k6:2.2.0-with-browser
-mcr.microsoft.com/playwright:v1.59.0-noble
+#mcr.microsoft.com/playwright:v1.59.0-noble
+gpustack/runner:dtk26.04-vllm0.18.1
